@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  composer: MyString
+  drawer: 1
+  number: 1
+
+two:
+  title: MyString
+  composer: MyString
+  drawer: 1
+  number: 1

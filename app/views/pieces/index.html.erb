@@ -1,0 +1,37 @@
+<h1>Listing pieces</h1>
+
+<%= form_tag pieces_path, :method => 'get' do %>  
+  <p>  
+    <%= text_field_tag :search, params[:search] %>  
+    <%= submit_tag "Search", :name => nil %>  
+  </p>  
+<% end %>  
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Composer</th>
+    <th>Drawer</th>
+    <th>Number</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pieces.each do |piece| %>
+  <tr>
+    <td><%= piece.title %></td>
+    <td><%= piece.composer %></td>
+    <td><%= piece.drawer %></td>
+    <td><%= piece.number %></td>
+    <td><%= link_to 'Show', piece %></td>
+    <td><%= link_to 'Edit', edit_piece_path(piece) %></td>
+    <td><%= link_to 'Destroy', piece, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Piece', new_piece_path %>
+<p><%= will_paginate @pieces %></p>
