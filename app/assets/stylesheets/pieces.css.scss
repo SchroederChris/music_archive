@@ -1,10 +1,6 @@
-// Place all the styles related to the Pieces controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-/* START_HIGHLIGHT */
 .pieces {
   h1 {
-    color: dodgerblue;
+    color: #105cb6;
   }
 
   table {
@@ -14,7 +10,6 @@
   table tr th {
     padding: 5px;
     vertical-align: top;
-    border-bottom-style: solid;
   }
 
   table tr td {
@@ -22,12 +17,17 @@
     vertical-align: top;
   }
 
+  .text_column {
+    text-align: left;
+  }
+
   .number_column {
     text-align: right;
   }
 
   .table_header {
-    background: dodgerblue;
+    color: white;
+    background: #105cb6;
   }
 
   .list_line_even {
@@ -38,31 +38,21 @@
   }
 
   .new_piece_link {
-    color: dodgerblue;
-  }
-  .new_piece_link:hover {
-    background: transparent;
+    color: #105cb6;
   }
 
   .action_edit {
-    color: dodgerblue;
-  }
-  .action_edit:hover {
-    background: transparent;
+    color: #105cb6;
   }
 
   .action_destroy {
     color: red;
   }
-  .action_destroy:hover {
-    background: transparent;
-  }
 
   .back_to_pieces_list_link {
-    color: dodgerblue;
+    color: #105cb6;
   }
-  .back_to_pieces_list_link:hover {
-    background: transparent;
-  }
+
 }
-/* END_HIGHLIGHT */
+
+@import "digg_pagination.css";

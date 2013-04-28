@@ -6,7 +6,7 @@ de:
 
   pieces:
     index: 
-      pieces: "Verfügbare Stücke"
+      pieces: "Übersicht"
       title: "Titel"
       composer: "Komponist"
       drawer: "Schublade"
@@ -59,3 +59,7 @@ de:
               not_a_number: "muss größer als 0 sein"
             number:
               not_a_number: "muss größer als 0 sein"
+
+  will_paginate:
+    previous_label: "Vorherige"
+    next_label: "Weitere"

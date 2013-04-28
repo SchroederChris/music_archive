@@ -1,5 +1,7 @@
 <h2><%= t('.pieces') %></h2>
 
+<p><%= link_to t('.new_piece'), new_piece_path, :class => "new_piece_link" %></p>
+
 <%= form_tag pieces_path, :method => 'get' do %>  
   <p>  
     <%= text_field_tag :search, params[:search] %>  
@@ -9,18 +11,18 @@
 
 <table>
   <tr class="table_header">
-    <th><%= t('.title') %></th>
-    <th><%= t('.composer') %></th>
-    <th><%= t('.drawer') %></th>
-    <th><%= t('.number') %></th>
+    <th class="text_column"><%= t('.title') %></th>
+    <th class="text_column"><%= t('.composer') %></th>
+    <th class="number_column"><%= t('.drawer') %></th>
+    <th class="number_column"><%= t('.number') %></th>
     <th></th>
     <th></th>
   </tr>
 
 <% @pieces.each do |piece| %>
   <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-    <td><%= piece.title %></td>
-    <td><%= piece.composer %></td>
+    <td class="text_column"><%= piece.title %></td>
+    <td class="text_column"><%= piece.composer %></td>
     <td class="number_column"><%= piece.drawer %></td>
     <td class="number_column"><%= piece.number %></td>
     <td><%= link_to t('.edit_piece'), edit_piece_path(piece), :class => "action_edit" %></td>
@@ -31,5 +33,4 @@
 
 <br />
 
-<%= link_to t('.new_piece'), new_piece_path, :class => "new_piece_link" %>
-<p><%= will_paginate @pieces %></p>
+<%= will_paginate @pieces, :class => "digg_pagination" %>
