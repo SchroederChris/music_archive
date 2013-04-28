@@ -1,5 +1,7 @@
 MusicArchive::Application.routes.draw do
-  resources :pieces
+  scope '(:locale)' do
+    resources :pieces
+  end
 
 
   # The priority is based upon order of creation:

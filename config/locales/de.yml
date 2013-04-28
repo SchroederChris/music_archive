@@ -1,0 +1,18 @@
+de:
+
+  layouts:
+    application:
+      title: "Notenarchiv"
+
+  pieces:
+    index: 
+      pieces: "Verfügbare Stücke:"
+      title: "Titel"
+      composer: "Komponist"
+      drawer: "Schublade"
+      number: "Nr."
+      search: "Suche"
+      show_piece: "Anzeigen"
+      edit_piece: "Bearbeiten"
+      destroy_piece: "Löschen"
+      new_piece: "Neues Stück"
