@@ -1,5 +1,7 @@
 de:
 
+  piece_successfully_created: "Das Stück wurde angelegt:"
+
   layouts:
     application:
       title: "Notenarchiv der Musikvereinigung 1851 Mettlach e.V."
@@ -24,6 +26,14 @@ de:
 
     edit:
       edit_piece: "Eintrag bearbeiten"
+      back_to_pieces_list: "Zurück zur Übersicht"
+
+    show:
+      title: "Titel:"
+      composer: "Komponist:"
+      drawer: "Schublade:"
+      number: "Nr.:"
+      edit_piece: "Bearbeiten"
       back_to_pieces_list: "Zurück zur Übersicht"
 
   helpers:

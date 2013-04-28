@@ -1,25 +1,25 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
+  <b><%= t('.title') %></b>
   <%= @piece.title %>
 </p>
 
 <p>
-  <b>Composer:</b>
+  <b><%= t('.composer') %></b>
   <%= @piece.composer %>
 </p>
 
 <p>
-  <b>Drawer:</b>
+  <b><%= t('.drawer') %></b>
   <%= @piece.drawer %>
 </p>
 
 <p>
-  <b>Number:</b>
+  <b><%= t('.number') %></b>
   <%= @piece.number %>
 </p>
 
 
-<%= link_to 'Edit', edit_piece_path(@piece) %> |
-<%= link_to 'Back', pieces_path %>
+<%= link_to t('.edit_piece'), edit_piece_path(@piece), :class => "action_edit" %> |
+<%= link_to t('.back_to_pieces_list'), pieces_path, :class => "back_to_pieces_list_link" %>
