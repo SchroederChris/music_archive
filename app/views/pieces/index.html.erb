@@ -1,11 +1,10 @@
 <h2><%= t('.pieces') %></h2>
 
-<p><%= link_to t('.new_piece'), new_piece_path, :class => "new_piece_link" %></p>
-
 <%= form_tag pieces_path, :method => 'get' do %>  
   <p>  
-    <%= text_field_tag :search, params[:search] %>  
-    <%= submit_tag t('.search'), :name => nil %>  
+    <%= text_field_tag :search, params[:search], :class => "input_field" %>  
+    <%= submit_tag t('.search'), :name => nil, :class => "button" %>  
+    <%= link_to t('.new_piece'), new_piece_path, :class => "button" %>
   </p>  
 <% end %>  
 
@@ -25,8 +24,8 @@
     <td class="text_column"><%= piece.composer %></td>
     <td class="number_column"><%= piece.drawer %></td>
     <td class="number_column"><%= piece.number %></td>
-    <td><%= link_to t('.edit_piece'), edit_piece_path(piece), :class => "action_edit" %></td>
-    <td><%= link_to t('.destroy_piece'), piece, method: :delete, data: { confirm: t('.confirm_delete') }, :class => "action_destroy" %></td>
+    <td><%= link_to t('.edit_piece'), edit_piece_path(piece), :class => "button" %></td>
+    <td><%= link_to t('.destroy_piece'), piece, method: :delete, data: { confirm: t('.confirm_delete') }, :class => "destroy_button" %></td>
   </tr>
 <% end %>
 </table>

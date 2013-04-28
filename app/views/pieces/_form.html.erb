@@ -13,21 +13,21 @@
 
   <div class="field">
     <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :class => "input_field" %>
   </div>
   <div class="field">
     <%= f.label :composer %><br />
-    <%= f.text_field :composer %>
+    <%= f.text_field :composer, :class => "input_field" %>
   </div>
   <div class="field">
     <%= f.label :drawer %><br />
-    <%= f.number_field :drawer %>
+    <%= f.number_field :drawer, :class => "input_field" %>
   </div>
   <div class="field">
     <%= f.label :number %><br />
-    <%= f.number_field :number %>
+    <%= f.number_field :number, :class => "input_field" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => "button" %>
   </div>
 <% end %>

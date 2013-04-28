@@ -45,7 +45,7 @@ de:
         number: "Nr."
 
     submit:
-      create: "Anlegen"
+      create: "Speichern"
       update: "Änderungen speichern"
 
   activerecord:
