@@ -6,7 +6,7 @@ de:
 
   pieces:
     index: 
-      pieces: "Verfügbare Stücke:"
+      pieces: "Verfügbare Stücke"
       title: "Titel"
       composer: "Komponist"
       drawer: "Schublade"
@@ -15,4 +15,47 @@ de:
       show_piece: "Anzeigen"
       edit_piece: "Bearbeiten"
       destroy_piece: "Löschen"
-      new_piece: "Neues Stück"
+      confirm_delete: "Soll der Eintrag wirklich gelöscht werden?"
+      new_piece: "Neuer Eintrag"
+
+    new:
+      new_piece: "Stück anlegen"
+      back_to_pieces_list: "Zurück zur Übersicht"
+
+    edit:
+      edit_piece: "Eintrag bearbeiten"
+      back_to_pieces_list: "Zurück zur Übersicht"
+
+  helpers:
+    label:
+      piece:
+        title: "Titel"
+        composer: "Komponist"
+        drawer: "Schublade"
+        number: "Nr."
+
+    submit:
+      create: "Anlegen"
+      update: "Änderungen speichern"
+
+  activerecord:
+    models:
+      piece: "Stück"
+    attributes:
+      piece:
+        title: "Titel"
+        composer: "Komponist"
+        drawer: "Schublade"
+        number: "Nr."
+    errors:
+      messages:
+        blank: "muss angegeben werden"
+        not_a_number: "muss eine Zahl sein"
+      
+      models:
+        piece:
+          attributes:
+            drawer:
+              not_a_number: "muss größer als 0 sein"
+            number:
+              not_a_number: "muss größer als 0 sein"

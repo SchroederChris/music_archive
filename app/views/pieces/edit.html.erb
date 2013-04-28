@@ -1,6 +1,5 @@
-<h1>Editing piece</h1>
+<h1><%= t('.edit_piece') %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @piece %> |
-<%= link_to 'Back', pieces_path %>
+<%= link_to t('.back_to_pieces_list'), pieces_path, :class => "back_to_pieces_list_link"  %>

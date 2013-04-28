@@ -8,30 +8,28 @@
 <% end %>  
 
 <table>
-  <tr>
+  <tr class="table_header">
     <th><%= t('.title') %></th>
     <th><%= t('.composer') %></th>
     <th><%= t('.drawer') %></th>
     <th><%= t('.number') %></th>
     <th></th>
     <th></th>
-    <th></th>
   </tr>
 
 <% @pieces.each do |piece| %>
-  <tr>
+  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
     <td><%= piece.title %></td>
     <td><%= piece.composer %></td>
-    <td><%= piece.drawer %></td>
-    <td><%= piece.number %></td>
-    <td><%= link_to t('.show_piece'), piece %></td>
-    <td><%= link_to t('.edit_piece'), edit_piece_path(piece) %></td>
-    <td><%= link_to t('.destroy_piece'), piece, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td class="number_column"><%= piece.drawer %></td>
+    <td class="number_column"><%= piece.number %></td>
+    <td><%= link_to t('.edit_piece'), edit_piece_path(piece), :class => "action_edit" %></td>
+    <td><%= link_to t('.destroy_piece'), piece, method: :delete, data: { confirm: t('.confirm_delete') }, :class => "action_destroy" %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to t('.new_piece'), new_piece_path %>
+<%= link_to t('.new_piece'), new_piece_path, :class => "new_piece_link" %>
 <p><%= will_paginate @pieces %></p>

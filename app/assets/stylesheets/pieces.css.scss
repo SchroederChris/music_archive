@@ -1,3 +1,68 @@
 // Place all the styles related to the Pieces controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/* START_HIGHLIGHT */
+.pieces {
+  h1 {
+    color: dodgerblue;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  table tr th {
+    padding: 5px;
+    vertical-align: top;
+    border-bottom-style: solid;
+  }
+
+  table tr td {
+    padding: 5px;
+    vertical-align: top;
+  }
+
+  .number_column {
+    text-align: right;
+  }
+
+  .table_header {
+    background: dodgerblue;
+  }
+
+  .list_line_even {
+    background: lightgray;
+  }
+  .list_line_odd {
+    background: white;
+  }
+
+  .new_piece_link {
+    color: dodgerblue;
+  }
+  .new_piece_link:hover {
+    background: transparent;
+  }
+
+  .action_edit {
+    color: dodgerblue;
+  }
+  .action_edit:hover {
+    background: transparent;
+  }
+
+  .action_destroy {
+    color: red;
+  }
+  .action_destroy:hover {
+    background: transparent;
+  }
+
+  .back_to_pieces_list_link {
+    color: dodgerblue;
+  }
+  .back_to_pieces_list_link:hover {
+    background: transparent;
+  }
+}
+/* END_HIGHLIGHT */
