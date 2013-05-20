@@ -3,7 +3,7 @@ class PiecesController < ApplicationController
   # GET /pieces.json
 
   def index
-    @pieces = Piece.search(params[:search]).paginate(page: params[:page], order: 'lower(title)', per_page: 20)
+    @pieces = Piece.search(params[:search]).paginate(page: params[:page], order: 'lower(title)', per_page: 15)
 
     respond_to do |format|
       format.html # index.html.erb

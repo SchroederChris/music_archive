@@ -21,11 +21,11 @@
   </div>
   <div class="field">
     <%= f.label :drawer %><br />
-    <%= f.number_field :drawer, :class => "input_field" %>
+    <%= f.text_field :drawer, :class => "input_field" %>
   </div>
   <div class="field">
     <%= f.label :number %><br />
-    <%= f.number_field :number, :class => "input_field" %>
+    <%= f.number_field :number, :min => 1, :class => "input_field" %>
   </div>
   <div class="actions">
     <%= f.submit :class => "button" %>
